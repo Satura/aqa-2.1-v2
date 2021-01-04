@@ -1,12 +1,20 @@
 package ru.netology;
 
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.Configuration;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class TestUI {
+
+    @BeforeAll
+    void setUp(){
+        Configuration.headless = true;
+    }
+
     @Test
     void shouldTest(){
         open("http://localhost:9999/");
