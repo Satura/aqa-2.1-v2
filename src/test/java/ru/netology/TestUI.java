@@ -11,7 +11,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class TestUI {
 
     @BeforeAll
-    void setUp(){
+    static void setUp(){
         Configuration.headless = true;
     }
 
